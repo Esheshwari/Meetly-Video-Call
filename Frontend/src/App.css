@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Landing Page */
+.landingPageContainer {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  overflow: hidden;
+}
+
+.landingPageContainer nav {
+  padding-inline: 2rem;
+  padding-block: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.landingPageContainer nav h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.landingPageContainer nav .navlist {
+  display: flex;
+  gap: 1.6rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+.landingPageContainer nav .navlist p,
+.landingPageContainer nav .navlist div {
+  padding: 0.8rem 1.6rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.landingPageContainer nav .navlist p:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.landingPageContainer nav .navlist div {
+  background: linear-gradient(135deg, #FF9839 0%, #FF6B6B 100%);
+  box-shadow: 0 4px 15px rgba(255, 152, 57, 0.4);
+}
+
+.landingPageContainer nav .navlist div:hover {
+  box-shadow: 0 6px 20px rgba(255, 152, 57, 0.6);
+  transform: translateY(-2px);
+}
+
+.landingMainContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 3rem;
+  height: 80vh;
+  align-items: center;
+  gap: 2rem;
+}
+
+.landingMainContainer > div:nth-child(1) {
+  font-size: 2.2rem;
+  flex: 1;
+  animation: slideInLeft 0.8s ease;
+}
+
+.landingMainContainer > div:nth-child(1) h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.landingMainContainer > div:nth-child(1) p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.landingMainContainer > div:nth-child(1) div[role='button'] {
+  background: linear-gradient(135deg, #FF9839 0%, #FF6B6B 100%);
+  width: fit-content;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  margin-top: 1.9rem;
+  box-shadow: 0 4px 20px rgba(255, 152, 57, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.landingMainContainer > div:nth-child(1) div[role='button']:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 30px rgba(255, 152, 57, 0.6);
+}
+
+.landingMainContainer > div:nth-child(1) div[role='button'] a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.landingMainContainer > div:nth-child(2) {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: slideInRight 0.8s ease;
+}
+
+.landingMainContainer > div:nth-child(2) img {
+  height: 70vh;
+  width: auto;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Navigation Bar */
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navBar h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.navBar > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navBar p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.navBar button {
+  background: linear-gradient(135deg, #FF9839 0%, #FF6B6B 100%) !important;
+  color: white !important;
+  border-radius: 25px !important;
+  padding: 0.7rem 1.5rem !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.navBar button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 15px rgba(255, 152, 57, 0.4) !important;
+}
+
+/* Meet Container */
+.meetContainer {
+  display: flex;
+  padding-inline: 2rem;
+  height: 80vh;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.leftPanel {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.leftPanel > div {
+  animation: fadeIn 0.8s ease;
+}
+
+.leftPanel h2 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+.leftPanel > div > div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.rightPanel {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.rightPanel > img {
+  width: 30vw;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .landingMainContainer {
+    flex-direction: column;
+    padding-inline: 1rem;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .landingMainContainer > div:nth-child(1) {
+    font-size: 1.5rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) h1 {
+    font-size: 2rem;
+  }
+
+  .landingMainContainer > div:nth-child(2) img {
+    height: 40vh;
+  }
+
+  .meetContainer {
+    flex-direction: column;
+    height: auto;
+    padding-block: 2rem;
+  }
+
+  .rightPanel > img {
+    width: 80vw;
+  }
+}
